@@ -1,0 +1,43 @@
+# Secrets. A token committed here stays in history forever, even after you
+# delete the file. Revoke first, rewrite history second.
+*.token
+token.txt
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ruff_cache/
+
+# LaTeX build products. Keep paper.tex, references.bib, figures, Makefile.
+paper/*.aux
+paper/*.bbl
+paper/*.bcf
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.run.xml
+paper/*.toc
+paper/*.synctex.gz
+
+# Cached network responses: reproducible from the harvester, so not source.
+data/raw/
+data/cache/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
