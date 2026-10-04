@@ -42,6 +42,36 @@ The START protocol states the gap directly: whether such training "can
 contribute to increased physical activity or to maintaining routines for this"
 has not been studied. This project picks up that thread.
 
+## What gets built
+
+A scheduler for adults with ADHD. Four capabilities:
+
+- **Daily tasks** with alerts and reminders.
+- **Weekly and monthly goals**, decomposed into daily actions.
+- **Completion logging** — whether a task was actually done, not just scheduled.
+- **Follow-up on a missed task**, re-prompting rather than letting it disappear.
+
+Each capability replaces something the trials paid human staff to provide:
+
+| Capability | What it replaces in the trials |
+|---|---|
+| Scheduling | Physiotherapist-led appointments, 2 x 50 min per week |
+| Alerts and reminders | Automated email plus "a reminder text message to their smartphone" |
+| Catch-up prompts | Make-up rules: a missed session could be taken another day that week, or at home with self-monitored reporting |
+| Completion logging | Attendance tracked against a 50% minimum participation floor |
+| Goal decomposition | Occupational-therapist-led training in "time management skills, planning and organization", six 60-minute sessions |
+
+All five come from the START trial (Arvidsson Lindvall et al., 2023,
+protocol). The last row is the one this project exists for: that arm was
+registered and never delivered as a randomised arm. See
+`notes/literature/evidence-table.md` section 7.
+
+**What this is not.** Not a general to-do application. The feature set is
+constrained to what the review finds load-bearing, and the prototype is
+judged on whether it delivers those capabilities reliably — not on feature
+count or user satisfaction.
+
+
 ## What this project does not claim
 
 It makes no claim that the intervention improves attention, focus, or ADHD
