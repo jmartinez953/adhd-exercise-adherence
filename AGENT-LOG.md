@@ -13,6 +13,8 @@ something I ran myself.
 | 2026-10-02 | - | Read Yang et al. (2025), J Glob Health 15:04025, in full; wrote evidence-table section 8 | **Not independently verified.** Figures are the agent's extraction. |
 | 2026-10-03 | #5 | Drafted the scheduler specification for README and the Design wiki page | Read the full diff; confirmed insertion not overwrite (30 insertions, 0 deletions); confirmed the mapping table matches across README, wiki and deck |
 | 2026-10-04 | #6 | Corrected the Mehren claim in the presentation deck | I found the error myself while spot-checking. See below. |
+| 2026-10-15 | #11 | Codex wrote tests/test_harvest.py first, then harvest.py. Issue, prompts and commit message drafted with Claude (chat). | Saw the tests fail before harvest.py existed, then pass (4 OK). Real run returned 360, matching the PubMed website the same evening. Manifest has 360 PMIDs and no email. No raw XML visible to git. A known flaw is recorded in #12. |
+| 2026-10-16 | #13 | Codex wrote tests/test_parse.py and four fixtures first, then parse.py. Issue, prompts and commit message drafted with Claude (chat). | Narrowed the two security tests to ParseError. Found in review that the first parse.py read the first matching element anywhere (wrong year, a cited reference's DOI); confirmed in the raw harvest, added a realistic test that failed, then fixed. 12 tests OK. 360 rows matching the manifest. Spot-checked PMID 25397765 against PubMed. |
 
 ## Verification status
 
