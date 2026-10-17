@@ -1,0 +1,55 @@
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>33333333</PMID>
+      <DateCompleted><Year>2025</Year></DateCompleted>
+      <DateRevised><Year>2026</Year></DateRevised>
+      <Article>
+        <ArticleTitle>A Realistic Record</ArticleTitle>
+        <Abstract Language="eng">
+          <AbstractText>Real abstract.</AbstractText>
+        </Abstract>
+        <OtherAbstract Language="spa">
+          <AbstractText>Resumen.</AbstractText>
+        </OtherAbstract>
+        <Journal>
+          <Title>Journal of Real Records</Title>
+          <JournalIssue>
+            <PubDate><Year>2024</Year></PubDate>
+          </JournalIssue>
+        </Journal>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <ArticleIdList>
+        <ArticleId IdType="doi">10.1000/real.doi</ArticleId>
+        <ArticleId IdType="pmc">PMC7654321</ArticleId>
+      </ArticleIdList>
+      <ReferenceList>
+        <Reference>
+          <Citation>A referenced article.</Citation>
+          <ArticleIdList>
+            <ArticleId IdType="doi">10.9999/reference.doi</ArticleId>
+            <ArticleId IdType="pmc">PMC9999999</ArticleId>
+          </ArticleIdList>
+        </Reference>
+      </ReferenceList>
+    </PubmedData>
+  </PubmedArticle>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>44444444</PMID>
+      <DateCompleted><Year>2025</Year></DateCompleted>
+      <Article>
+        <ArticleTitle>A Medline Date Record</ArticleTitle>
+        <Journal>
+          <Title>Journal of Date Records</Title>
+          <JournalIssue>
+            <PubDate><MedlineDate>2018 Jan-Feb</MedlineDate></PubDate>
+          </JournalIssue>
+        </Journal>
+      </Article>
+    </MedlineCitation>
+    <PubmedData />
+  </PubmedArticle>
+</PubmedArticleSet>
