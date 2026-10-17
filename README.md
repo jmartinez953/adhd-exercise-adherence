@@ -81,13 +81,52 @@ measurable. This is a support tool, not a treatment or a diagnostic.
 
 ## How to run it
 
-Nothing to run yet. This section gets written when there is a pipeline, and it
-will contain the exact commands needed to reproduce every number in the
-write-up.
+### The research pipeline
+
+Searches PubMed with the committed query and turns the results into a list
+of candidate trials. Python standard library only: nothing to install.
+Tested with Python 3.14 and Expat 2.7.4; parse.py refuses to run with an
+Expat older than 2.7.2.
+
+1. Run the tests:
+
+~~~
+python3 -m unittest -v
+~~~
+
+2. Set the email NCBI asks programs to identify themselves with. It is read
+   from the environment and never written into the repository:
+
+~~~
+export NCBI_EMAIL="you@example.com"
+~~~
+
+3. Harvest. Reads the query from notes/inclusion-criteria.md, saves the raw
+   XML to data/raw/<date>/ (not committed), and writes a manifest of the
+   query, run time, count and PMIDs to data/manifests/<date>.json:
+
+~~~
+python3 harvest.py
+~~~
+
+4. Parse. Reads the newest manifest and its raw XML, checks every PMID is
+   accounted for, and writes data/candidates/<date>.csv:
+
+~~~
+python3 parse.py
+~~~
+
+Dates are UTC. PubMed adds papers daily, so a new run produces a new dated
+manifest and CSV rather than reproducing an earlier count. The first run,
+2026-10-16, found 360 records.
+
+### The scheduler
+
+Built in Milestone 4. Instructions are added then.
 
 ## State
 
-Week 6, October 2026. Literature pass complete: ten sources examined, nine
+Week 8, October 2026. Literature pass complete: ten sources examined, nine
 read in full text, with access levels and unverified claims tracked in
 `notes/literature/evidence-table.md`.
 
@@ -100,7 +139,10 @@ is too thin to pool. The binding constraint identified across these trials is
 adherence, not exercise selection. The project now targets the scaffolding
 itself. The rejected approach is recorded on the wiki Appendix page.
 
-No pipeline yet. Milestone 1 closing; Milestone 2 next.
+Pipeline built. Milestone 1 closed 2026-10-03, two weeks late. Milestone 2
+(Working pipeline) completed 2026-10-16: harvest.py and parse.py are tested
+and merged, and the first run found 360 candidate records. Next: screening
+(Milestone 3) and choosing the scheduler's platform (Prototype design, #10).
 
 ## Layout
 
