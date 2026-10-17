@@ -1,0 +1,15 @@
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>87654321</PMID>
+      <Article>
+        <ArticleTitle>A Minimal Study</ArticleTitle>
+        <Journal>
+          <Title>Journal of Simple Tests</Title>
+          <JournalIssue><PubDate><MedlineDate>2019 Spring</MedlineDate></PubDate></JournalIssue>
+        </Journal>
+      </Article>
+    </MedlineCitation>
+    <PubmedData />
+  </PubmedArticle>
+</PubmedArticleSet>
